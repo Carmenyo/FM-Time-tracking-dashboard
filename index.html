@@ -1,80 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Time tracking dashboard</title>
 
-  Report for
-  Jeremy Robson
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="activity-tracker">
+      <section class="activity-tracker__menu">
+        <div class="activity-tracker__owner">
+          <img
+            src="./images/image-jeremy.png"
+            alt="Imagen del propietario"
+            class="activity-tracker__owner-img"
+          />
+          <div class="activity-tracker__owner-container">
+            <p class="activity-tracker__owner-for">Report for</p>
+            <h1 class="activity-tracker__owner-name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="activity-tracker__options">
+          <button class="activity-tracker__option" data_option="daily">
+            Daily
+          </button>
 
-  Daily
-  Weekly
-  Monthly
+          <button class="activity-tracker__option" data_option="weekly">
+            Weekly
+          </button>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+          <button class="activity-tracker__option" data_option="Monthly">
+            Monthly
+          </button>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+        </div>
+      </section>
+    </section>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+<section class="activity-tracker__activity work">
+  <div class="activity__backgound">
+    <img src="./images/icon-work.svg" alt="Icono de trabajo">
+<div class="activity__info">
+  <header class="activity__header">
+    <h2 class="activity__name">
+      Work
+    </h2>
+    <div class="activity__options">
+      <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </svg>
+    </div>
+  </header>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+  <div class="activity__timeframes">
+    <h3 class="activity__current-timeframe">
+      32hrs
+    </h3>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+    <div class="activity__previus-timeframe">
+      <p class="time-window">
+        Last Week
+      </p>
+      <p>-</p>
+      <p class="time">36hrs</p>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
-</body>
+
+</div>
+  </div>
+</section>
+
+<section class="activity-tracker__activity play">
+  <div class="activity__backgound">
+    <img src="./images/icon-play.svg" alt="Icono de jugar">
+<div class="activity__info">
+  <header class="activity__header">
+    <h2 class="activity__name">
+      Play
+    </h2>
+    <div class="activity__options">
+      <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+      </svg>
+    </div>
+  </header>
+
+  <div class="activity__timeframes">
+    <h3 class="activity__current-timeframe">
+      10hrs
+    </h3>
+
+    <div class="activity__previus-timeframe">
+      <p class="time-window">
+        Last Week
+      </p>
+      <p>-</p>
+      <p class="time">8hrs</p>
+
+  </div>
+
+</div>
+  </div>
+</section>
+
+<section class="activity-tracker__activity study">
+  <div class="activity__backgound">
+    <img src="./images/icon-study.svg" alt="Icono de estudio">
+<div class="activity__info">
+  <header class="activity__header">
+    <h2 class="activity__name">
+      Study
+    </h2>
+    <div class="activity__options">
+      <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </svg>
+    </div>
+  </header>
+
+  <div class="activity__timeframes">
+    <h3 class="activity__current-timeframe">
+      4hrs
+    </h3>
+
+    <div class="activity__previus-timeframe">
+      <p class="time-window">
+        Last Week
+      </p>
+      <p>-</p>
+      <p class="time">7hrs</p>
+
+  </div>
+
+</div>
+  </div>
+</section>
+
+<section class="activity-tracker__activity exercise">
+  <div class="activity__backgound">
+    <img src="./images/icon-exercise.svg" alt="Icono de ejercicio">
+<div class="activity__info">
+  <header class="activity__header">
+    <h2 class="activity__name">
+      Work
+    </h2>
+    <div class="activity__options">
+      <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </svg>
+    </div>
+  </header>
+
+  <div class="activity__timeframes">
+    <h3 class="activity__current-timeframe">
+      4hrs
+    </h3>
+
+    <div class="activity__previus-timeframe">
+      <p class="time-window">
+        Last Week
+      </p>
+      <p>-</p>
+      <p class="time">9hrs</p>
+
+  </div>
+
+</div>
+  </div>
+</section>
+<section class="activity-tracker__activity social">
+  <div class="activity__backgound">
+    <img src="./images/icon-social.svg" alt="Icono de social">
+<div class="activity__info">
+  <header class="activity__header">
+    <h2 class="activity__name">
+      Social
+    </h2>
+    <div class="activity__options">
+      <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </svg>
+    </div>
+  </header>
+
+  <div class="activity__timeframes">
+    <h3 class="activity__current-timeframe">
+      5hrs
+    </h3>
+
+    <div class="activity__previus-timeframe">
+      <p class="time-window">
+        Last Week
+      </p>
+      <p>-</p>
+      <p class="time">10hrs</p>
+
+  </div>
+
+</div>
+  </div>
+</section>
+<section class="activity-tracker__activity SelfCare">
+  <div class="activity__backgound">
+    <img src="./images/icon-self-care.svg" alt="Icono de cuidado">
+<div class="activity__info">
+  <header class="activity__header">
+    <h2 class="activity__name">
+      Self Care
+    </h2>
+    <div class="activity__options">
+      <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+      </svg>
+    </div>
+  </header>
+
+  <div class="activity__timeframes">
+    <h3 class="activity__current-timeframe">
+      2hrs
+    </h3>
+
+    <div class="activity__previus-timeframe">
+      <p class="time-window">
+        Last Week
+      </p>
+      <p>-</p>
+      <p class="time">2hrs</p>
+
+  </div>
+
+</div>
+  </div>
+</section>
+
+  
+  </body>
+  <script src="./js/script.js"></script>
 </html>
