@@ -15,3 +15,82 @@ font-family: "Rubik", sans-serif;
 --DesaturatedBlue: hsl(235, 45%, 61%);
 --PaleBlue: hsl(236, 100%, 87%);
 }
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--VeryDarkBlue);
+    display: grid;
+    place-items: center;
+    padding: 5.1rem 1rem 8rem 1rem;
+}
+
+.activity-tracker{
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2.4rem;
+}
+
+.activity-tracker__menu{
+    width: 90%;
+    background-color: var(--DarkBlue);
+    border-radius: 1rem;
+    overflow: hidden;
+    
+}
+.activity-tracker__owner{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    background-color: var(--Blue);
+    border-radius: 0 0 1rem 1rem;
+    padding: 1rem;
+}
+.activity-tracker__owner-img{
+    width: 4rem;
+    border: 0.3rem solid white;
+    border-radius: 50%;
+}
+.activity-tracker__owner-container{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.4rem
+}
+.activity-tracker__owner-for{
+    font-size: 1rem;
+    color: var(--PaleBlue);
+}
+.activity-tracker__owner-name{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: white;
+}
+.activity-tracker__options{
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+}
+.activity-tracker__option{
+    background-color: var(--DarkBlue);
+    width: max-content;
+    color: var(--DesaturatedBlue);
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+
+@media screen and (min-width: 768px){
+.activity-tracker{
+    max-width: 111rem;
+}
+}
+    
+
