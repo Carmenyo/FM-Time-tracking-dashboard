@@ -112,6 +112,8 @@ button.classList.add("active")
 
 const renderCards = (clickedOption) => {
 
+    const activityTracker = document.querySelector("section.activity-tracker")
+
     const calcTimeframe = (option) => {
         if (option === "daily"){
             return "Yesterday"
@@ -132,36 +134,34 @@ const renderCards = (clickedOption) => {
         section.classList.add ("activity-tracker__activity", activityClass)
         const stringToInject = `
             <div class="activity__background">
-           <img src="./images/icon-${activityClass}.svg" alt="Icono de trabajo"></div>
-       <div class="activity__info">
-         <header class="activity__header">
-           <h2 class="activity__name">
-             ${name}
-           </h2>
-           <div class="activity__options">
-             <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
-             </svg>
-           </div>
-         </header>
-       
-         <div class="activity__timeframes">
-           <h3 class="activity__current-timeframe">
-             ${timeframeData.current}
-           </h3>
-       
-           <div class="activity__previus-timeframe">
-             <p class="time-window">
-              ${previusTimeFrame}
-             </p>
-             <p>-</p>
-             <p class="time">${timeframeData.previous}</p>
-       
-         </div>
-       
-       </div>
-         </div>`
+        <img src="./images/icon-${activityClass}.svg" alt=""></div>
+    <div class="activity__info">
+        <header class="activity__header">
+        <h2 class="activity__name">
+            ${name}
+        </h2>
+        <div class="activity__options">
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+            </svg>
+        </div>
+        </header>
+    
+        <div class="activity__timeframes">
+        <h3 class="activity__current-timeframe">
+            ${timeframeData.current}
+        </h3>
+
+        <div class="activity__previus-timeframe">
+            <p class="time-window">
+            ${previusTimeFrame}
+            </p>
+            <p> - </p>
+            <p class="time">${timeframeData.previous}</p>
+        </div>
+    </div>
+        </div>`
         section.innerHTML = stringToInject 
-        console.log(section)
+        activityTracker.append(section)
     });
 };
 
