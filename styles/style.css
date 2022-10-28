@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Rubik:wght@300;400;500&display=swap');
 
-html {
+*{
 font-family: "Rubik", sans-serif;
 /*colors*/
 --Blue: hsl(246, 80%, 60%);
@@ -21,11 +21,12 @@ body{
     background-color: var(--VeryDarkBlue);
     display: grid;
     place-items: center;
-    padding: 5.1rem 2.4rem;
+    padding: 5rem 2rem;
 }
 
 .activity-tracker{
-    width: 100%;
+    width: 90%;
+    margin: 1rem 1rem;
     height: auto;
     display: grid;
     grid-auto-rows: max-content;
@@ -41,7 +42,7 @@ body{
     overflow: hidden;
     
 }
-.activity-tracker__owner{
+.activity-tracker__profile{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -51,22 +52,22 @@ body{
     border-radius: 1rem;
     padding: 1.3rem 1rem;
 }
-.activity-tracker__owner-img{
+.activity-tracker__profile-image{
     width: 3.5rem;
     border: 0.3rem solid white;
     border-radius: 50%;
 }
-.activity-tracker__owner-container{
+.activity-tracker__profile-container{
     display: flex;
     flex-flow: column nowrap;
     gap: 0.4rem
 }
-.activity-tracker__owner-for{
+.activity-tracker__profile-for{
     font-size: 0.9rem;
     color: var(--PaleBlue);
     margin-top: 1.5rem;
 }
-.activity-tracker__owner-name{
+.activity-tracker__profile-name{
     font-size: 1.4rem;
     font-weight: 300;
     color: white;
@@ -118,8 +119,8 @@ border-radius: 1rem;
 .activity-tracker__activity:is(.social){
     background-color: var(--VioletSocial);
 }
-.activity-tracker__activity:is(.selfCare){
-    background-color: var(--SoftOrangeSelfCare);
+.activity-tracker__activity:is(.SelfCare){
+    background-color: var(--LimeGreenExercise);
 }
 
 .activity__background{
@@ -186,7 +187,7 @@ border-radius: 1rem;
 .activity-tracker {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     grid-template-rows: 1fr 1fr;
     min-height: 50rem;
     max-width: 90rem;
@@ -196,7 +197,7 @@ border-radius: 1rem;
     display: flex;
     flex-flow: column nowrap;
 }
-.activity-tracker__owner {
+.activity-tracker__profile {
     padding: 3.4rem 2.9rem 17rem 2.9rem;
     flex-flow: column;
     align-items: start;

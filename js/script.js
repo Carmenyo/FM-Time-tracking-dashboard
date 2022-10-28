@@ -85,7 +85,7 @@ let data = [
     }
     },
     {
-    "title":"Self Care",
+    "title":"SelfCare",
     "timeframes": {
         "daily": {
         "current": 0,
@@ -110,24 +110,27 @@ buttons.forEach(b => b.classList.remove ("active"))
 button.classList.add("active")
 }
 
+const clear = () => {
+    const activities = document.querySelectorAll(".activity-tracker__activity")
+    activities.forEach(a => a.remove())
+}
 const renderCards = (clickedOption) => {
-
+    clear()
     const activityTracker = document.querySelector("section.activity-tracker")
 
     const calcTimeframe = (option) => {
         if (option === "daily"){
-            return "Yesterday"
+            return "Day"
         } else if (option === "weekly") {
-            return "Last Week" 
+            return "Week" 
         } else if (option === "monthly"){
-        return "Last Month"
+        return "Month"
     }
     } 
 
-
     data.forEach(activity => {
         const name = activity.title
-        const activityClass = name.toLowerCase().replace(" " , "-")
+        const activityClass = name.toLowerCase()
         const timeframeData = activity.timeframes [clickedOption]
         const previusTimeFrame = calcTimeframe(clickedOption)
         const section = document.createElement("section")
