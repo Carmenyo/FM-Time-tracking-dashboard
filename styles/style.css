@@ -119,8 +119,8 @@ border-radius: 1rem;
 .activity-tracker__activity:is(.social){
     background-color: var(--VioletSocial);
 }
-.activity-tracker__activity:is(.SelfCare){
-    background-color: var(--LimeGreenExercise);
+.activity-tracker__activity:is(.selfcare){
+    background-color: var(--SoftOrangeSelfCare);
 }
 
 .activity__background{
@@ -186,7 +186,7 @@ border-radius: 1rem;
 
 .activity-tracker {
     display: grid;
-    width: 100%;
+    width: 90%;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
     grid-template-rows: 1fr 1fr;
     min-height: 50rem;

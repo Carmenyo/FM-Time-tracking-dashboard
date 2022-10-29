@@ -85,7 +85,7 @@ let data = [
     }
     },
     {
-    "title":"SelfCare",
+    "title":"Selfcare",
     "timeframes": {
         "daily": {
         "current": 0,
@@ -177,3 +177,4 @@ buttons.forEach(button => {
     })
     
 })
+buttons[1].click()
