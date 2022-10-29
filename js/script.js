@@ -151,7 +151,7 @@ const renderCards = (clickedOption) => {
     
         <div class="activity__timeframes">
         <h3 class="activity__current-timeframe">
-            ${timeframeData.current}
+            ${timeframeData.current}hrs
         </h3>
 
         <div class="activity__previus-timeframe">
